@@ -1,0 +1,38 @@
+body, html {
+  font-family: sans-serif;
+  background: #f3f3f3;
+  color: #333;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0;
+}
+
+.header, .footer, .content {
+  margin: 15px auto;
+  max-width: 420px;
+  padding: 0 30px;
+}
+
+.logo {
+  width: 200px;
+  display: block;
+  margin: 0 auto;
+}
+
+.avatar1 {
+  height: 80px;
+}
+
+.content {
+  background: #fff;
+  padding: 15px 30px;
+  box-shadow: 0 0px 1px 1px rgba(0,0,0,0.1);
+}
+
+.alert {
+  padding: 10px 15px;
+  background: #ffe7c9;
+  color: #a97022;
+  border-radius: 2px;
+  font-weight: bold;
+}

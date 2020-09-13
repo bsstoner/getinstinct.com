@@ -1,0 +1,447 @@
+body, html {
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+  color: #333;
+  line-height: 1.6;
+}
+
+.alert {
+  display: block;
+  background: #e24d4d;
+  color: #fff;
+  text-align: center;
+  font-weight: 300;
+  padding: 10px;
+  margin: 0;
+}
+
+.content {
+  background: url(/img/guitarist-with-laptop.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 60px 0;
+}
+
+.logo {
+  display: block;
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.logo img {
+  display: block;
+  max-width: 100%;
+}
+
+.content h1 {
+  font-weight: 300;
+  max-width: 90%;
+  margin: 15px auto;
+  line-height: 1.2;
+}
+
+.content video {
+  margin: 30px auto;
+  width: 100%;
+  max-width: 800px;
+  box-shadow: 0 0 15px 0px rgba(0,0,0,0.2);
+}
+
+.letter {
+  padding: 15px 30px;
+  max-width: 500px;
+  text-align: left;
+  margin: 0 auto;
+  background: rgba(255,255,255,.75);
+}
+
+.avatars {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  width: 960px;
+  list-style: none;
+  padding: 0 ;
+  margin: 0 auto;
+  height: 330px;
+}
+.avatars li {
+  position: absolute;
+  display: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+.avatars li.shown {
+  -webkit-animation: 0.5s popIn 1;
+  -moz-animation: 0.5s popIn 1;
+  animation: 0.5s popIn 1;
+  display: block;
+}
+.no-animation .avatars li {
+  display: block;
+}
+.avatars li img {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  -webkit-transition: 0.3s ease-out all;
+  -moz-transition: 0.3s ease-out all;
+  -ms-transition: 0.3s ease-out all;
+  -o-transition: 0.3s ease-out all;
+  transition: 0.3s ease-out all;
+}
+.avatars-quote {
+  display: none;
+  position: absolute;
+  background: #fff;
+  -webkit-box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  width: 300px;
+  top: -80px;
+  left: 50%;
+  margin: 0 0 0 -150px;
+  padding: 15px 15px;
+  font-style: italic;
+  font-size: 20px;
+  font-weight: 300;
+  text-align: center;
+  z-index: 50;
+}
+.avatars-quote-text {
+  position: relative;
+  z-index: 51;
+}
+.avatars-quote-nub {
+  position: absolute;
+  display: block;
+  background: #fff;
+  -webkit-box-shadow: 2px 2px 2px rgba(0,0,0,0.1);
+  -moz-box-shadow: 2px 2px 2px rgba(0,0,0,0.1);
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.1);
+  width: 30px;
+  height: 30px;
+  -webkit-transform: rotate(80deg) skew(40deg);
+  -moz-transform: rotate(80deg) skew(40deg);
+  -ms-transform: rotate(80deg) skew(40deg);
+  -o-transform: rotate(80deg) skew(40deg);
+  transform: rotate(80deg) skew(40deg);
+  bottom: -14px;
+  left: 50%;
+  z-index: 50;
+}
+.avatars-name,
+.avatars-location {
+  position: relative;
+  text-align: center;
+  display: block;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+}
+.avatars-name {
+  color: #3788be;
+}
+.avatars-name:hover {
+  text-decoration: underline;
+}
+.avatars-post-foreground .avatars-name,
+.avatars-post-foreground .avatars-location {
+  opacity: 1;
+  -webkit-animation: 1s fadeIn 1;
+  -moz-animation: 1s fadeIn 1;
+  animation: 1s fadeIn 1;
+}
+.avatars-post-foreground .avatars-quote {
+  display: block;
+  -webkit-animation: 0.5s bounce 1;
+  -moz-animation: 0.5s bounce 1;
+  animation: 0.5s bounce 1;
+}
+.avatars-foreground {
+  z-index: 100 !important;
+}
+.avatars-foreground img {
+  width: 150px !important;
+}
+.avatars-1 {
+  left: 60px;
+  top: 125px;
+  z-index: 1;
+}
+.avatars-1 img {
+  width: 100px;
+}
+.avatars-1 .avatars-quote {
+  left: 70%;
+}
+.avatars-1 .avatars-quote-nub {
+  left: 40%;
+}
+.avatars-2 {
+  left: 125px;
+  top: 120px;
+  z-index: 2;
+}
+.avatars-2 img {
+  width: 110px;
+}
+.avatars-3 {
+  left: 195px;
+  top: 120px;
+  z-index: 3;
+}
+.avatars-3 img {
+  width: 120px;
+}
+.avatars-4 {
+  left: 260px;
+  top: 125px;
+  z-index: 2;
+}
+.avatars-4 img {
+  width: 100px;
+}
+.avatars-5 {
+  left: 350px;
+  top: 120px;
+  z-index: 3;
+}
+.avatars-5 img {
+  width: 110px;
+}
+.avatars-6 {
+  left: 420px;
+  top: 110px;
+  z-index: 1;
+}
+.avatars-6 img {
+  width: 100px;
+}
+.avatars-7 {
+  left: 480px;
+  top: 120px;
+  z-index: 4;
+}
+.avatars-7 img {
+  width: 120px;
+}
+.avatars-8 {
+  left: 560px;
+  top: 110px;
+  z-index: 1;
+}
+.avatars-8 img {
+  width: 110px;
+}
+.avatars-9 {
+  left: 640px;
+  top: 125px;
+  z-index: 3;
+}
+.avatars-9 img {
+  width: 120px;
+}
+.avatars-9 .avatars-quote {
+  width: 250px;
+  margin-left: -125px;
+}
+.avatars-10 {
+  left: 720px;
+  top: 120px;
+  z-index: 2;
+}
+.avatars-10 img {
+  width: 110px;
+}
+.avatars-10 .avatars-quote {
+  left: 35%;
+}
+.avatars-11 {
+  left: 790px;
+  top: 120px;
+  z-index: 1;
+}
+.avatars-11 img {
+  width: 90px;
+}
+.avatars-11 .avatars-quote {
+  left: -20px;
+}
+.avatars-11 .avatars-quote-nub {
+  left: 80%;
+}
+@media all and (min-width: 768px) and (max-width: 979px) {
+  .avatars {
+    left: -10%;
+    max-width: 120%;
+  }
+  .avatars-8 .avatars-quote {
+    margin-left: -200px;
+  }
+  .avatars-8 .avatars-quote-nub {
+    left: 70%;
+  }
+  .avatars-9 .avatars-quote {
+    margin-left: -200px;
+    width: 230px;
+  }
+  .avatars-9 .avatars-quote-nub {
+    left: 80%;
+  }
+}
+@media all and (max-width: 767px) {
+  .home-social-proof {
+    margin: 0 10px;
+  }
+  .avatars {
+    padding: 0;
+    margin: 0;
+    left: -25%;
+    max-width: 125%;
+  }
+  .avatars li.avatars-foreground {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    display: block !important;
+  }
+  .avatars-quote {
+    width: 250px;
+    margin: 0 0 0 -140px;
+    font-size: 18px;
+  }
+  .avatars-1 .avatars-quote,
+  .avatars-9 .avatars-quote,
+  .avatars-10 .avatars-quote,
+  .avatars-11 .avatars-quote,
+  .avatars-1 .avatars-quote-nub,
+  .avatars-11 .avatars-quote-nub {
+    left: 50%;
+  }
+  .avatars-9 .avatars-quote {
+    margin: 0 0 0 -140px;
+  }
+}
+/* press */
+.press1,
+.press2 {
+  display: block;
+  position: relative;
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 5px 0;
+  text-align: center;
+}
+.press1 li,
+.press2 li {
+  display: inline-block;
+  padding: 0;
+  height: 40px;
+  margin: 0 15px;
+}
+.press1 li a,
+.press2 li a {
+  display: inline-block;
+  vertical-align: middle;
+  background: url("/img/press-sprite.png?v=2.0.0") no-repeat;
+  -webkit-transition: 0.2s linear opacity;
+  -moz-transition: 0.2s linear opacity;
+  -ms-transition: 0.2s linear opacity;
+  -o-transition: 0.2s linear opacity;
+  transition: 0.2s linear opacity;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dppx) {
+  .press1 li a,
+  .press2 li a {
+    background: url("/img/press-sprite2x.png?v=2.0.0") no-repeat;
+    background-size: 291px 231px;
+  }
+}
+.press1 li a.press-wsj {
+  background-position: 0 0;
+  opacity: 0.4;
+  width: 290px;
+  height: 24px;
+}
+.press1 li a.press-wsj:hover {
+  opacity: 0.6;
+}
+.press1 li a.press-bbc {
+  background-position: 0px -25px;
+  opacity: 0.3;
+  width: 100px;
+  height: 28px;
+}
+.press1 li a.press-bbc:hover {
+  opacity: 0.5;
+}
+.press1 li a.press-tnw {
+  background-position: 0 -54px;
+  opacity: 0.6;
+  width: 82px;
+  height: 35px;
+}
+.press1 li a.press-tnw:hover {
+  opacity: 0.8;
+}
+.press1 li a.press-pando {
+  background-position: 0 -170px;
+  opacity: 0.4;
+  width: 145px;
+  height: 30px;
+}
+.press1 li a.press-pando:hover {
+  opacity: 0.6;
+}
+.press2 li a.press-allthingsd {
+  background-position: 0 -89px;
+  opacity: 0.4;
+  width: 225px;
+  height: 31px;
+}
+.press2 li a.press-allthingsd:hover {
+  opacity: 0.6;
+}
+.press2 li a.press-verge {
+  background-position: 0 -202px;
+  opacity: 0.3;
+  height: 25px;
+  width: 147px;
+}
+.press2 li a.press-verge:hover {
+  opacity: 0.5;
+}
+.press2 li a.press-evolver {
+  background-position: 0 -120px;
+  opacity: 0.4;
+  height: 20px;
+  width: 135px;
+}
+.press2 li a.press-evolver:hover {
+  opacity: 0.6;
+}
+@media all and (max-width: 767px) {
+  .press1 li {
+    max-width: 270px;
+  }
+}
+
+
